@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">BANCO DE ALIMENTOS</a>
+    </div>
+
+
+
+    <!-- *************** usuarios no logueados ******************************-->
+    <ul class="nav navbar-nav" *ngIf="!isLogged">
+      <li ><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+      <li><a routerLink="/register"><span class="glyphicon glyphicon-user"></span>REGISTRARSE</a></li>
+    </ul>
+
+     <!-- ***************** usuarios banco ***************************** -->
+    <ul class="nav navbar-nav" *ngIf="isBanco">
+        <li ><a href="altaUsuarioDonante.html">ALTA USUARIO DONANTE</a></li>
+        <li class="active"><a href="listadoDeDonadores.html">LISTADO DE DONADORES</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">RECORRIDOS
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="recorridoDelDia.html">CARGAR RECORRIDO</a></li>
+            <li><a href="recorridosPorSemana.html">VER RECORRIDOS</a></li>
+          </ul>
+        </li>
+    </ul>
+
+      <!-- ********************* usuario administrador ******************* -->
+    <ul class="nav navbar-nav" *ngIf="isAdmin">
+        <li><a href="altaUsuarioBanco.html">ALTA NUEVO USUARIO BANCO</a></li>
+        <li><a href="listadoDeUsuarios.html">LISTADO DE USUARIOS</a></li>
+    </ul>
+
+    <!-- ************** usuario donante ************************* -->
+    <ul class="nav navbar-nav" *ngIf="isDoner">
+      <li class="active"><a href="altaProductos.html">ALTA PRODUCTO</a></li>
+      <li><a href="foro.html">FORO</a></li>
+      <li><a href="listadoRecorridos.html">LISTADO DE RECORRIDOS</a></li>
+    </ul>
+
+    <!-- ************** todos los usuarios ************************* -->
+    <ul class="nav navbar-nav navbar-right" *ngIf="isLogged"> 
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> PERFIL</a></li>
+      <li><a (click)="logout()"> LOGOUT</a></li>
+    </ul>
+  </div>
+</nav>
