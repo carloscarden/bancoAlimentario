@@ -5,10 +5,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../_guards';
 
 
-import { CreateComponent } from './cargar-user-banco/create.component';
-import { ListComponent } from './listar-user-banco/list.component';
-import { UpdateComponent } from './update-user-banco/update.component';
-import { ViewComponent } from './view/view.component';
+import { CargarUserBancoComponent } from './cargar-user-banco/cargar-user-banco.component';
+import { ListarUserBancoComponent } from './listar-user-banco/listar-user-banco.component';
+import { UpdateUserBancoComponent } from './update-user-banco/update-user-banco.component';
+import { ViewUserBancoComponent } from './view-user-banco/view-user-banco.component';
 import { Role } from '../_models'
 
 
@@ -17,25 +17,25 @@ import { Role } from '../_models'
 const routes: Routes = [
   {
     path: 'crearUsuario',
-    component: CreateComponent,
+    component: CargarUserBancoComponent,
     canActivate: [AuthGuard],
     data:{ roles: [Role.Admin] }
   },
   {
     path: 'listarUsuarios',
-    component: ListComponent,
+    component: ListarUserBancoComponent,
     canActivate: [AuthGuard],
     data:{ roles: [Role.Admin] }
   },
   {
     path: 'actualizarUsuario',
-    component: UpdateComponent,
+    component: UpdateUserBancoComponent,
     canActivate: [AuthGuard],
     data:{ roles: [Role.Admin] }
   },
   {
     path: 'verUsuario',
-    component: ViewComponent,
+    component: ViewUserBancoComponent,
     canActivate: [AuthGuard],
     data:{ roles: [Role.Admin] }
   }

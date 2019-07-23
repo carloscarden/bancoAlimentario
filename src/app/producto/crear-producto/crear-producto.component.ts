@@ -5,11 +5,11 @@ import { first } from 'rxjs/operators';
 
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  selector: 'app-crear-producto',
+  templateUrl: './crear-producto.component.html',
+  styleUrls: ['./crear-producto.component.css']
 })
-export class CreateComponent implements OnInit {
+export class CrearProductoComponent implements OnInit {
   loading = false;
   submitted = false;
   returnUrl: string;

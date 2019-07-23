@@ -1,42 +1,26 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from '../_guards';
-import { CreateComponent } from './crear-producto/create.component';
-import { ListComponent } from './listar-producto/list.component';
-import { UpdateComponent } from './update-producto/update.component';
-import { ViewComponent } from './view-producto/view.component';
+import { RouterModule } from '@angular/router';
+
+import { CrearProductoComponent } from './crear-producto/crear-producto.component';
+import { ListarProductoComponent } from './listar-producto/listar-producto.component';
+import { UpdateProductoComponent } from './update-producto/update-producto.component';
+import { ViewProductoComponent } from './view-producto/view-producto.component';
+
+import {ProductoRoutingModule} from './producto-routing.module'
 
 
-
-
-const routes: Routes = [
-  {
-    path: 'crearProducto',
-    component: CreateComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'listarProductos',
-    component: ListComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'actualizarProducto',
-    component: UpdateComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'verProducto',
-    component: ViewComponent,
-    canActivate: [AuthGuard],
-  }
-];
 
 
 @NgModule({
-  imports: [RouterModule.forChild(routes),CommonModule],
+  imports: [
+    ProductoRoutingModule
+  ],
   exports: [RouterModule],
-  declarations: []
+  declarations: [
+    CrearProductoComponent,
+    ListarProductoComponent,
+    UpdateProductoComponent,
+    ViewProductoComponent
+  ]
 })
 export class ProductoModule { }

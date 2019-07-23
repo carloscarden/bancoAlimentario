@@ -10,9 +10,8 @@ import { HeaderComponent } from './_shared/header/header.component';
 import { FooterComponent } from './_shared/footer/footer.component';
 import { LoginComponent } from './public/login/login.component';
 import { RegisterComponent } from './public/register/register.component';
-import { CargarRecorridoComponent } from './recorrido/cargar-recorrido/cargar-recorrido.component';
-import { ListarRecorridosComponent } from './recorrido/listar-recorridos/listar-recorridos.component'
 import { PerfilComponent } from './settings/perfil/perfil.component';
+import { ListarComentariosComponent } from './foro/listar-comentarios/listar-comentarios.component'
 
 
 // used to create fake backend
@@ -22,9 +21,8 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 // modules
 import { AppRoutingModule } from './app-routing.module';
-import { UsersModule } from '../app/users/users.module'
+import { UsersModule } from './userBanco/users.module'
 import { DonacionModule } from '../app/donacion/donacion.module';
-import { CargarUserDonanteComponent } from './userDonante/cargar-user-donante/cargar-user-donante.component';
 
 
 @NgModule({
@@ -35,9 +33,7 @@ import { CargarUserDonanteComponent } from './userDonante/cargar-user-donante/ca
     LoginComponent,
     RegisterComponent,
     PerfilComponent,
-    CargarRecorridoComponent,
-    ListarRecorridosComponent,
-    CargarUserDonanteComponent
+    ListarComentariosComponent
   ],
   imports: [
     BrowserModule,

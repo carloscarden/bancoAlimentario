@@ -4,11 +4,11 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { first } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  selector: 'app-cargar-user-banco',
+  templateUrl: './cargar-user-banco.component.html',
+  styleUrls: ['./cargar-user-banco.component.css']
 })
-export class CreateComponent implements OnInit {
+export class CargarUserBancoComponent implements OnInit {
   loading = false;
   submitted = false;
   returnUrl: string;
