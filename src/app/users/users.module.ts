@@ -1,48 +1,28 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-
-import { AuthGuard } from '../_guards';
+import { RouterModule } from '@angular/router';
 
 
-import { CreateComponent } from './create/create.component';
-import { ListComponent } from './list/list.component';
-import { UpdateComponent } from './update/update.component';
+
+import { CreateComponent } from './cargar-user-banco/create.component';
+import { ListComponent } from './listar-user-banco/list.component';
+import { UpdateComponent } from './update-user-banco/update.component';
 import { ViewComponent } from './view/view.component';
+import { UserRoutingModule } from './user-routing.module'
 
 
-
-const routes: Routes = [
-  {
-    path: 'crearUsuario',
-    component: CreateComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'listarUsuario',
-    component: ListComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'actualizarUsuario',
-    component: UpdateComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'verUsuario',
-    component: ViewComponent,
-    canActivate: [AuthGuard],
-  }
-];
 
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes),
-    CommonModule
+    UserRoutingModule
   ],
 
   exports: [RouterModule],
-  declarations: []
+  declarations: [
+    CreateComponent,
+    ListComponent,
+    UpdateComponent,
+    ViewComponent
+  ]
 })
 export class UsersModule { }

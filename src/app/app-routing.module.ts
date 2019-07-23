@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './_guards';
-import { Role } from './_models';
 
 import { LoginComponent } from './public/login/login.component';
 import { RegisterComponent } from './public/register/register.component';
@@ -21,6 +20,18 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path:'producto',
+    loadChildren: './producto/producto.module#ProductoModule'
+  },
+  {
+    path:'usuarios',
+    loadChildren: './users/users.module#UsersModule'
+  },
+  {
+    path:'donacion',
+    loadChildren: './donacion/donacion.module#DonacionModule'
   },
 
   // otherwise redirect to home

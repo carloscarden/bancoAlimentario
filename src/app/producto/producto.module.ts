@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../_guards';
-import { CreateComponent } from './create/create.component';
-import { ListComponent } from './list/list.component';
-import { UpdateComponent } from './update/update.component';
-import { ViewComponent } from './view/view.component';
+import { CreateComponent } from './crear-producto/create.component';
+import { ListComponent } from './listar-producto/list.component';
+import { UpdateComponent } from './update-producto/update.component';
+import { ViewComponent } from './view-producto/view.component';
 
 
 
