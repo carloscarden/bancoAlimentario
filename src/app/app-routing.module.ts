@@ -34,12 +34,20 @@ const routes: Routes = [
     loadChildren: './producto/producto.module#ProductoModule'
   },
   {
-    path:'usuarios',
+    path:'usuarioBanco',
     loadChildren: './userBanco/users.module#UsersModule'
   },
   {
     path:'donacion',
     loadChildren: './donacion/donacion.module#DonacionModule'
+  },
+  {
+    path: 'recorrido',
+    loadChildren: './recorrido/recorrido.module#RecorridoModule'
+  },
+  {
+    path: 'usuarioDonante',
+    loadChildren: './userDonante/user-donante.module#UserDonanteModule'
   },
 
   // otherwise redirect to home

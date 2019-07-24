@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -14,13 +16,21 @@
 
      <!-- ***************** usuarios banco ***************************** -->
     <ul class="nav navbar-nav" *ngIf="isBanco">
-        <li ><a href="altaUsuarioDonante.html">ALTA USUARIO DONANTE</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">USUARIOS DONANTE
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/usuarioDonante/crearUsuarioDonante">ALTA USUARIO DONANTE</a></li>
+              <li><a routerLink="/usuarioDonante/listarUsuariosDonantes">LISTADO DE USUARIOS</a></li>
+            </ul>
+        </li>
+
         <li class="active"><a routerLink="/donacion/listarDonaciones">LISTADO DE DONACIONES</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">RECORRIDOS
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a routerLink="/recorrido/cargarRecorrido">CARGAR RECORRIDO</a></li>
+            <li><a routerLink="/recorrido/crearRecorrido">CARGAR RECORRIDO</a></li>
             <li><a routerLink="/recorrido/listarRecorridos">VER RECORRIDOS</a></li>
           </ul>
         </li>
@@ -28,8 +38,8 @@
 
       <!-- ********************* usuario administrador ******************* -->
     <ul class="nav navbar-nav" *ngIf="isAdmin">
-        <li><a routerLink="/usuarios/crearUsuario" routerLinkActive="active">ALTA NUEVO USUARIO BANCO</a></li>
-        <li><a routerLink="/usuarios/listarUsuarios" routerLinkActive="active">LISTADO DE USUARIOS</a></li>
+        <li><a routerLink="/usuarioBanco/crearUsuario" routerLinkActive="active">ALTA NUEVO USUARIO BANCO</a></li>
+        <li><a routerLink="/usuarioBanco/listarUsuarios" routerLinkActive="active">LISTADO DE USUARIOS</a></li>
     </ul>
 
     <!-- ************** usuario donante ************************* -->
