@@ -9,12 +9,19 @@ import { UpdateUserBancoComponent } from './update-user-banco/update-user-banco.
 import { ViewUserBancoComponent } from './view-user-banco/view-user-banco.component';
 import { UserRoutingModule } from './user-routing.module'
 
+import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import {MatInputModule} from '@angular/material/input';
+
+
 
 
 
 @NgModule({
   imports: [
-    UserRoutingModule
+    UserRoutingModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule
   ],
 
   exports: [RouterModule],

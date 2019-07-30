@@ -4,13 +4,13 @@ import { AuthGuard } from '../_guards';
 import { Routes, RouterModule } from '@angular/router';
 
 import { Role } from '../_models';
-import { CargarRecorridoComponent } from './cargar-recorrido/cargar-recorrido.component';
 import { ListarRecorridosComponent } from './listar-recorridos/listar-recorridos.component';
+import { VerCargaRecorridosComponent} from './ver-carga-recorridos/ver-carga-recorridos.component';
 
 const routes: Routes = [
   {
-    path: 'crearRecorrido',
-    component: CargarRecorridoComponent,
+    path: 'crearNuevoRecorrido',
+    component: VerCargaRecorridosComponent,
     canActivate: [AuthGuard],
     data:{ roles: [Role.Banco] }
   },

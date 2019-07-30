@@ -1,3 +1,19 @@
-<p>
-  create works!
-</p>
+<ol>
+  <li>
+    <mat-form-field>
+      <input matInput [(ngModel)]="donacion.sucursal" placeholder="What's your name?">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Cargar productos</button>
+  </li>
+  <h1>Productos donados</h1>
+  <div *ngFor="let product of donacion.productos">
+    
+
+    <h3>
+       Nombre del producto: {{ product.tipo }} ,Cantidad: {{ product.cantidad}}
+    </h3>
+  
+  </div>
+</ol>

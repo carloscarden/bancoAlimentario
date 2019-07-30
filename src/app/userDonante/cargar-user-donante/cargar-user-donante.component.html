@@ -1,3 +1,32 @@
-<p>
-  cargar-user-donante works!
-</p>
+<div class="container">
+    <div [hidden]="submitted">
+      <h1>Donante</h1>
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+        <div class="form-group">
+          <label for="name">Empresa/organizacion</label>
+          <input type="text" class="form-control" id="name"
+                 required
+                 [(ngModel)]="donante.empresa" name="name"
+                 #name="ngModel">
+          <div [hidden]="name.valid || name.pristine"
+               class="alert alert-danger">
+            El nombre de la empresa/organizacion es requerido
+          </div>
+        </div>
+   
+        <div class="form-group">
+          <label for="alterEgo">Domicilio</label>
+          <input type="text" class="form-control" id="alterEgo"
+                 [(ngModel)]="donante.domicilio" name="alterEgo">
+        </div>
+   
+      
+   
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+        <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
+      </form>
+    </div>
+   
+    
+  </div>
+  

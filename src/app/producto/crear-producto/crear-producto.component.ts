@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+
+import {Donacion} from '../../_models/donacion'
+import {Producto} from '../../_models/producto'
 
 
 @Component({
@@ -14,14 +18,20 @@ export class CrearProductoComponent implements OnInit {
   submitted = false;
   returnUrl: string;
   error = '';
-  createProductoForm:FormGroup;
+
+  producto=new Producto();
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private fb: FormBuilder) { }
+    public dialogRef: MatDialogRef<CrearProductoComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Donacion) {}
 
   ngOnInit() {
   }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+ 
 
 }

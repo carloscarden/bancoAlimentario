@@ -1,0 +1,20 @@
+<ol>
+    <li>
+      <mat-form-field>
+        <input matInput placeholder="What's your name?">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Cargar nuevo recorrido</button>
+    </li>
+    <h1>Recorridos</h1>
+    <div *ngFor="let recorrido of recorridos">
+      
+  
+      <h3>
+         Direccion: {{ recorrido.direccion}}
+      </h3>
+    
+    </div>
+  </ol>
+  
