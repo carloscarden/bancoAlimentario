@@ -10,7 +10,7 @@ import { ViewUserBancoComponent } from './view-user-banco/view-user-banco.compon
 import { UserRoutingModule } from './user-routing.module'
 
 import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 
 
 

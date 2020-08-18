@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // components
@@ -11,7 +11,7 @@ import { FooterComponent } from './_shared/footer/footer.component';
 import { LoginComponent } from './public/login/login.component';
 import { RegisterComponent } from './public/register/register.component';
 import { PerfilComponent } from './settings/perfil/perfil.component';
-import { ListarComentariosComponent } from './foro/listar-comentarios/listar-comentarios.component'
+import { ListarComentariosComponent } from './foro/listar-comentarios/listar-comentarios.component';
 
 
 // used to create fake backend
@@ -20,10 +20,10 @@ import { fakeBackendProvider } from './_helpers';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 // material modules
-import {MatNativeDateModule} from '@angular/material/core';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { MatNativeDateModule } from '@angular/material/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from './material-module.module';
+import { DemoMaterialModule } from './material-module.module';
 
 
 
@@ -31,7 +31,7 @@ import {DemoMaterialModule} from './material-module.module';
 
 // modules
 import { AppRoutingModule } from './app-routing.module';
-import { UsersModule } from './userBanco/users.module'
+import { UsersModule } from './userBanco/users.module';
 import { DonacionModule } from '../app/donacion/donacion.module';
 import { RecorridoModule } from '../app/recorrido/recorrido.module';
 import { UserDonanteModule } from '../app/userDonante/user-donante.module';
@@ -60,7 +60,7 @@ import { UserDonanteModule } from '../app/userDonante/user-donante.module';
     DonacionModule,
     RecorridoModule,
     UserDonanteModule
-    
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

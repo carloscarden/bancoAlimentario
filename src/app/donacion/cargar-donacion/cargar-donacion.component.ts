@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 
-import {Donacion} from '../../_models/donacion'
+import { Donacion } from '../../_models/donacion';
 
-import {CrearProductoComponent } from '../../producto/crear-producto/crear-producto.component'
+import { CrearProductoComponent } from '../../producto/crear-producto/crear-producto.component';
 
 
 @Component({
@@ -16,14 +16,14 @@ import {CrearProductoComponent } from '../../producto/crear-producto/crear-produ
 export class CargarDonacionComponent implements OnInit {
 
   powers = ['Really Smart', 'Super Flexible',
-  'Super Hot', 'Weather Changer'];
-  donacion= new Donacion();
+    'Super Hot', 'Weather Changer'];
+  donacion = new Donacion();
   submitted = false;
 
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.donacion.productos=[];
+    this.donacion.productos = [];
   }
 
   openDialog(): void {
@@ -36,13 +36,13 @@ export class CargarDonacionComponent implements OnInit {
       console.log('The dialog was closed');
       console.log(result);
 
-      if(result){
-        this.donacion.productos.push(result)
+      if (result) {
+        this.donacion.productos.push(result);
       }
     });
   }
 
-  
+
 
   onSubmit() { this.submitted = true; }
 

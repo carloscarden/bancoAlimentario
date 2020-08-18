@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import {CargarRecorridoComponent} from '../cargar-recorrido/cargar-recorrido.component'
+import { CargarRecorridoComponent } from '../cargar-recorrido/cargar-recorrido.component';
 
 
 @Component({
@@ -10,7 +10,7 @@ import {CargarRecorridoComponent} from '../cargar-recorrido/cargar-recorrido.com
   styleUrls: ['./ver-carga-recorridos.component.css']
 })
 export class VerCargaRecorridosComponent implements OnInit {
-  recorridos=[];
+  recorridos = [];
 
   constructor(public dialog: MatDialog) { }
 
@@ -26,8 +26,8 @@ export class VerCargaRecorridosComponent implements OnInit {
       console.log('The dialog was closed');
       console.log(result);
 
-      if(result){
-        this.recorridos.push(result)
+      if (result) {
+        this.recorridos.push(result);
       }
     });
   }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MatDialogRef} from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 import { Recorrido } from '../../_models/recorrido';
 
@@ -10,11 +10,11 @@ import { Recorrido } from '../../_models/recorrido';
   styleUrls: ['./cargar-recorrido.component.css']
 })
 export class CargarRecorridoComponent implements OnInit {
-  recorrido= new Recorrido();
+  recorrido = new Recorrido();
 
   constructor(
     public dialogRef: MatDialogRef<CargarRecorridoComponent>,
-  ) {}
+  ) { }
 
   ngOnInit() {
   }

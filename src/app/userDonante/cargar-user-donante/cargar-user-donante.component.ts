@@ -12,6 +12,7 @@ export class CargarUserDonanteComponent implements OnInit {
 
   model = new Donante();
 
+  donante;
   submitted = false;
 
   onSubmit() { this.submitted = true; }
@@ -22,5 +23,7 @@ export class CargarUserDonanteComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  newHero() { }
 
 }

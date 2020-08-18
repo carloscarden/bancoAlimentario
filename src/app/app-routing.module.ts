@@ -6,7 +6,7 @@ import { LoginComponent } from './public/login/login.component';
 import { RegisterComponent } from './public/register/register.component';
 import { PerfilComponent } from './settings/perfil/perfil.component';
 import { ListarComentariosComponent } from './foro/listar-comentarios/listar-comentarios.component';
-import { Role} from './_models/role'
+import { Role } from './_models/role';
 
 
 const routes: Routes = [
@@ -27,18 +27,18 @@ const routes: Routes = [
     path: 'foro',
     component: ListarComentariosComponent,
     canActivate: [AuthGuard],
-    data:{ roles: [Role.Donante, Role.Banco] }
+    data: { roles: [Role.Donante, Role.Banco] }
   },
   {
-    path:'producto',
+    path: 'producto',
     loadChildren: './producto/producto.module#ProductoModule'
   },
   {
-    path:'usuarioBanco',
+    path: 'usuarioBanco',
     loadChildren: './userBanco/users.module#UsersModule'
   },
   {
-    path:'donacion',
+    path: 'donacion',
     loadChildren: './donacion/donacion.module#DonacionModule'
   },
   {

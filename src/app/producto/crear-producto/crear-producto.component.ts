@@ -1,11 +1,11 @@
-import { Component, OnInit,Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
-import {Donacion} from '../../_models/donacion'
-import {Producto} from '../../_models/producto'
+import { Donacion } from '../../_models/donacion';
+import { Producto } from '../../_models/producto';
 
 
 @Component({
@@ -19,11 +19,11 @@ export class CrearProductoComponent implements OnInit {
   returnUrl: string;
   error = '';
 
-  producto=new Producto();
+  producto = new Producto();
 
   constructor(
     public dialogRef: MatDialogRef<CrearProductoComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Donacion) {}
+    @Inject(MAT_DIALOG_DATA) public data: Donacion) { }
 
   ngOnInit() {
   }
@@ -32,6 +32,6 @@ export class CrearProductoComponent implements OnInit {
     this.dialogRef.close();
   }
 
- 
+
 
 }
